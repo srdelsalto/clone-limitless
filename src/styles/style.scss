@@ -1,0 +1,78 @@
+@use './reset.scss';
+@use './header.scss';
+
+$primary-color: #7929ec; // Color morado para el logo
+$secondary-color: #f7f7f7; // Color de fondo de la barra de navegación
+$font-family: 'Roboto', sans-serif;
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
+
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        vertical-align: middle;
+        padding: 15px 250px; 
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: $primary-color; // Establecer el color morado para el logo
+        text-decoration: none;
+
+        a {
+            color: $primary-color;
+            text-decoration: none;
+            vertical-align: middle;
+            text-align: center;
+            font-family: $font-family;
+        }
+    }
+
+    .navbar-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+
+        li {
+            display: inline-block;
+
+            a {
+                color: #333;
+                text-decoration: none;
+                font-family: $font-family;
+                font-weight: 500;
+                padding: 8px 16px;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .navbar-actions {
+        .navbar-btn {
+            background-color: $primary-color;
+            color: white;
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: darken($primary-color, 10%);
+            }
+        }
+    }
+}
