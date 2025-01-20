@@ -1,0 +1,82 @@
+.meetings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 64px);
+    text-align: center;
+    padding: 0 16px;
+
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: #1F2937;
+    }
+
+    p {
+        margin-top: 16px;
+        font-size: 1.5rem;
+        color: #6B7280;
+    }
+
+    p span {
+        transition: color 0.3s ease;
+    }
+
+    p span.scrolled {
+        color: #6B21A8;
+        /* Purple color */
+    }
+
+    .card-section {
+        position: relative;
+    }
+
+    .card {
+        background-color: #F3F4F6;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        position: sticky;
+        top: 1rem;
+        z-index: 1;
+    }
+
+    .card:nth-child(2) {
+        z-index: 2;
+    }
+
+    .card:nth-child(3) {
+        z-index: 3;
+    }
+
+    .card:nth-child(4) {
+        z-index: 4;
+    }
+
+    .card h2 {
+        color: #8B5CF6;
+        font-size: 1.125rem;
+        font-weight: 600;
+    }
+
+    .card h1 {
+        font-size: 1.875rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+    }
+
+    .card p {
+        color: #6B7280;
+        margin-top: 1rem;
+    }
+
+    .card img {
+        margin-top: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: auto;
+    }
+}

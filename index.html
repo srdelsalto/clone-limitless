@@ -1,4 +1,834 @@
-<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Go beyond your mind’s limitations: Personalized AI powered by what you’ve seen, said, and heard.">
+  <meta name="author" content="Santiago Del Salto">
+  <meta name="keywords" content="AI, Limitless, Wearable AI, minds, limitations, personalized AI, seen, said, heard">
+  <meta property="og:title" content="Limitless">
+  <meta property="og:type" content="website">
+  <meta property="og:description"
+    content="Go beyond your mind’s limitations: Personalized AI powered by what you’ve seen, said, and heard.">
+  <meta property="og:image" content="./images/og-preview.jpg">
+  <meta property="og:image:alt" content="Go beyond your mind's limitations">
+  <meta name="twitter:title" content="Limitless">
+  <meta name="twitter:description"
+    content="Go beyond your mind’s limitations: Personalized AI powered by what you’ve seen, said, and heard.">
+  <meta name="twitter:image" content="./images/og-preview.jpg">
+  <meta name="twitter:image:alt" content="Go beyond your mind's limitations">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@santyrdse">
+  <title>Limitless</title>
+  <link href="/images/favicon.png" rel="icon" type="image/png">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles/bas.css">
+  <link rel="stylesheet" href="./src/styles/page.scss">
+
+  
+  <style>
+    .sub-title {
+      font-size: 1.7rem;
+      color: #B2B2B3;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .info-section {
+      margin-bottom: 5rem;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .info-grid {
+      margin: 0 2rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #6B7280;
+      max-width: 64rem;
+      font-size: large;
+    }
+
+    .info-grid p {
+      font-weight: 600;
+      color: #6B7280;
+    }
+
+    .info-grid p span {
+      color: #1F2937;
+    }
+
+    .info-grid p span.secondary {
+      color: #6B7280;
+    }
+
+    .pricing-section {
+      padding: 4rem 1rem;
+      background-color: #ffffff;
+    }
+
+    .pricing-section h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .toggle-buttons {
+      display: flex;
+      margin-bottom: 2rem;
+      justify-content: center;
+    }
+
+    .toggle-buttons button {
+      background: none;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .toggle-buttons .active {
+      color: #6b46c1;
+      border-bottom: 2px solid #6b46c1;
+    }
+
+    .pricing-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .pricing-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      padding: 2rem;
+      text-align: center;
+      width: 20rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 24rem;
+    }
+
+    .pricing-card h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card p {
+      color: #718096;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-card .price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card .price-details {
+      color: #718096;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-card button {
+      background-color: #e2e8f0;
+      color: #1a202c;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 1rem;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+
+    .pricing-card .highlight {
+      color: #6b46c1;
+    }
+
+    .pricing-card .highlight-button {
+      background-color: black;
+      color: white;
+    }
+
+    .pricing-card .info-icon {
+      margin-left: 0.25rem;
+    }
+
+    .price-container {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      margin-bottom: 1rem;
+    }
+
+    .price-container .price {
+      margin-right: 0.5rem;
+    }
+
+    .main-content {
+      padding: 60px 20px;
+    }
+
+    .main-content h1 {
+      font-size: 64px;
+      font-weight: 700;
+      margin: 20px 0;
+      color: #1a1a1a;
+    }
+
+    .main-content p {
+      font-size: 24px;
+      color: #888888;
+      margin: 10px 0;
+    }
+
+    .main-content .tagline {
+      font-size: 18px;
+      color: #b0a4f1;
+    }
+
+    .main-content .tagline span {
+      color: #f1c0a4;
+    }
+
+    .main-content .button {
+      display: inline-flex;
+      align-items: center;
+      background-color: #ffffff;
+      border: 1px solid #eaeaea;
+      border-radius: 25px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #333333;
+      font-weight: 500;
+    }
+
+    .main-content .button i {
+      margin-right: 10px;
+    }
+
+    .main-content video {
+      margin-top: 20px;
+      max-width: 100%;
+      height: auto;
+      width: 50%;
+    }
+
+    .color-options-container {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 30px;
+      background-color: #f0f0f0;
+      margin-bottom: 20px;
+    }
+
+    .color-options {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .color-options .color {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 2px solid #e0e0e0;
+      cursor: pointer;
+    }
+
+    .color-options .color.selected {
+      border-color: #333333;
+    }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      color: #888888;
+      margin-bottom: 20px;
+    }
+
+    .preorder-button {
+      background-color: #333333;
+      color: #ffffff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .no-subscription {
+      font-size: 14px;
+      color: #888888;
+      margin-top: 10px;
+    }
+
+    .main-content-pendant {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .pendant-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .feature-list ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .feature-list ul li {
+      margin: 10px 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .product-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .preorder-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+    }
+
+    .preorder-section button {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .preorder-section select {
+      margin: 0 10px;
+      padding: 5px;
+    }
+
+    .additional-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .additional-section__card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 10px;
+      padding: 20px;
+      flex: 1;
+      min-width: 300px;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .additional-section__image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .content-section {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .content-section h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1a1a1a;
+    }
+
+    .content-section p {
+      font-size: 24px;
+      font-weight: 400;
+      color: #a0a0a0;
+      margin: 20px 0;
+    }
+
+    .section {
+      margin: 40px 0;
+    }
+
+    .section h2 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .section p {
+      font-size: 16px;
+      font-weight: 400;
+      color: #a0a0a0;
+    }
+
+    .two-columns {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      text-align: left;
+      margin: 40px 0;
+    }
+
+    .two-columns .column {
+      width: 48%;
+    }
+
+    .preorder {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px;
+    }
+
+    .preorder button {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .preorder select {
+      margin-right: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #eaeaea;
+      font-size: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .pricing-cards {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .pricing-card {
+        margin: 0 0.75rem;
+        width: 20rem;
+      }
+
+      .main-content h1 {
+        font-size: 48px;
+      }
+
+      .main-content p {
+        font-size: 20px;
+      }
+
+      .main-content video {
+        width: 100%;
+      }
+
+      nav {
+        display: flex;
+      }
+
+      .signup-btn {
+        display: block;
+        padding: 0.5rem 1rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 0.375rem;
+        color: #4a5568;
+        background: none;
+      }
+
+      .signup-btn:hover {
+        background-color: #f7fafc;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+    <header id="header">
+      <div class="logo">
+        <!-- SVG con rol y descripción -->
+        <svg fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logo-title">
+          <title id="logo-title">Limitless Logo</title>
+          <path
+            d="M12.094 7.12a.85.85 0 0 0 .786.786c3.895.28 6.72 1.111 6.72 2.094s-2.825 1.814-6.72 2.094a.85.85 0 0 0-.786.786c-.28 3.895-1.111 6.72-2.094 6.72s-1.814-2.825-2.094-6.72a.85.85 0 0 0-.786-.786C3.225 11.814.4 10.983.4 10s2.825-1.814 6.72-2.094a.85.85 0 0 0 .786-.786C8.186 3.225 9.017.4 10 .4s1.814 2.825 2.094 6.72"
+            fill="#6B46C1"></path>
+          <path
+            d="M12.976 7.257a.28.28 0 0 1-.253-.253 29 29 0 0 0-.178-1.565.82.82 0 0 1 .333-.791c1.908-1.342 3.404-1.943 3.907-1.44s-.095 1.994-1.431 3.897a.82.82 0 0 1-.793.333 29 29 0 0 0-1.585-.18m2.378 5.631a.82.82 0 0 0-.793-.333q-.759.109-1.585.18a.28.28 0 0 0-.253.254 29 29 0 0 1-.178 1.565.82.82 0 0 0 .333.791c1.908 1.341 3.404 1.942 3.907 1.44.503-.503-.095-1.994-1.431-3.897M7.09 15.364a.82.82 0 0 0 .334-.793 29 29 0 0 1-.18-1.581.28.28 0 0 0-.254-.254 29 29 0 0 1-1.56-.177.82.82 0 0 0-.793.334c-1.334 1.9-1.93 3.39-1.428 3.892.5.501 1.985-.092 3.881-1.42m-1.66-7.93a.82.82 0 0 1-.793-.334C3.303 5.2 2.707 3.711 3.21 3.21c.5-.501 1.985.092 3.881 1.42a.82.82 0 0 1 .334.793 29 29 0 0 0-.18 1.582.28.28 0 0 1-.254.253c-.54.047-1.063.107-1.56.178"
+            fill="#9F7AEA"></path>
+        </svg>
+        <span>Limitless</span>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#" role="link">Meetings</a>
+        <a href="#" role="link">Pendant</a>
+        <a href="#" role="link">Privacy</a>
+      </nav>
+      <button class="signup-btn" aria-label="Sign up for Limitless">Sign up</button>
+    </header>
+
+    <main>
+      <div class="content-wrapper">
+        <div class="video-button">
+          <svg class="w-4 h-4 xs:w-5 xs:h-5" fill="none" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg"
+            role="img" aria-labelledby="video-icon-title">
+            <title id="video-icon-title">Play launch video</title>
+            <path
+              d="M14.979 9.06 8.197 4.82a1.11 1.11 0 0 0-1.697.941v8.477c0 .87.959 1.402 1.697.94l6.78-4.239a1.107 1.107 0 0 0 .002-1.88"
+              fill="currentColor"></path>
+          </svg>
+          <span>See the launch video</span>
+        </div>
+        <h1 class="main-title">Go beyond your<br />mind’s limitations</h1>
+        <div style="opacity: 1;" class="tracking-tight">
+          <h2 class="sub-title">Personalized AI powered by what<br />you’ve seen, said, and heard.</h2>
+        </div>
+        <button class="cta-button" aria-label="Get started for free">Get started for free</button>
+
+        <section class="meetings" aria-labelledby="meetings-heading">
+          <h1 id="meetings-heading">Meetings</h1>
+          <p>
+            Make your day feel easy with all the context<br>
+            from your online and real-world conversations<br>
+            in one place.
+            <span id="scrollText">No bots required.</span>
+          </p>
+        </section>
+
+        <section class="card-section" aria-label="Meeting Preparation Cards">
+          <div class="card" role="group" aria-labelledby="card1-title" aria-describedby="card1-desc">
+            <h2 id="card1-title">Prep</h2>
+            <h1>Make the most of every conversation with pre-meeting briefs</h1>
+            <p id="card1-desc">
+              Get context from your Gmail, Google Calendar, previous meetings, and in-person conversations before your
+              call.
+            </p>
+            <img
+              src="https://www.limitless.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeeting-prep.a288b879.jpg&w=1080&q=90"
+              alt="Visual representation of pre-meeting preparation details" />
+          </div>
+
+          <div class="card" role="group" aria-labelledby="card2-title" aria-describedby="card2-desc">
+            <h2 id="card2-title">Prep</h2>
+            <h1>Make the most of every conversation with pre-meeting briefs</h1>
+            <p id="card2-desc">
+              Get context from your Gmail, Google Calendar, previous meetings, and in-person conversations before your
+              call.
+            </p>
+            <img
+              src="https://www.limitless.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeeting-transcript.a5026c4c.jpg&w=1080&q=90"
+              alt="Example of meeting transcript for preparation" />
+          </div>
+
+          <div class="card" role="group" aria-labelledby="card3-title" aria-describedby="card3-desc">
+            <h2 id="card3-title">Prep</h2>
+            <h1>Make the most of every conversation with pre-meeting briefs</h1>
+            <p id="card3-desc">
+              Get context from your Gmail, Google Calendar, previous meetings, and in-person conversations before your
+              call.
+            </p>
+            <img
+              src="https://www.limitless.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeeting-notes.11163976.jpg&w=1080&q=90"
+              alt="Detailed meeting notes example for preparation" />
+          </div>
+
+          <div class="card" role="group" aria-labelledby="card4-title" aria-describedby="card4-desc">
+            <h2 id="card4-title">Prep</h2>
+            <h1>Make the most of every conversation with pre-meeting briefs</h1>
+            <p id="card4-desc">
+              Get context from your Gmail, Google Calendar, previous meetings, and in-person conversations before your
+              call.
+            </p>
+            <img
+              src="https://www.limitless.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeeting-summary.59ed6657.jpg&w=1080&q=90"
+              alt="Summary of a meeting example for preparation" />
+          </div>
+        </section>
+      </div>
+
+      <div class="info-section">
+        <div class="info-grid">
+          <p>
+            <span class="text-slate-900">
+              No awkward bot
+            </span>
+            <span class="secondary">
+              joining your meetings.
+            </span>
+          </p>
+          <p>
+            <span class="text-slate-900">
+              Won't slow your computer
+            </span>
+            and has unlimited storage.
+          </p>
+          <p>
+            <span class="text-slate-900">
+              Data encrypted
+            </span>
+            and stored in the Limitless Confidential Cloud.
+          </p>
+          <p>
+            <span class="text-slate-900">
+              Works with any meeting tool
+            </span>
+            like Zoom, Slack, Meet, and more.
+          </p>
+          <p>
+            <span class="text-slate-900">
+              Instantly join and record
+            </span>
+            meetings right on time with just one click.
+          </p>
+          <p>
+            <span class="text-slate-900">
+              Usable on any device
+            </span>
+            including the web, your phone, a Mac, or PC.
+          </p>
+        </div>
+      </div>
+
+      <section class="pricing-section">
+        <h1>Get started today</h1>
+        <div class="toggle-buttons">
+          <button class="active">Yearly</button>
+          <button>Monthly</button>
+        </div>
+        <div class="pricing-cards">
+          <div class="pricing-card">
+            <h2>Free</h2>
+            <p>1,200 minutes <i class="fas fa-info-circle info-icon"></i></p>
+            <div class="price-container">
+              <div class="price">$0</div>
+              <div class="price-details">per month</div>
+            </div>
+            <button>Sign up</button>
+            <p>Best for students</p>
+            <div style="flex-grow: 1;"></div> <!-- Empty space to ensure equal height -->
+          </div>
+          <div class="pricing-card">
+            <p class="highlight">Save $120 per year</p>
+            <h2 class="highlight">Pro</h2>
+            <p>6,000 minutes <i class="fas fa-info-circle info-icon"></i></p>
+            <div class="price-container">
+              <div class="price">$19</div>
+              <div class="price-details">per month<br>billed yearly</div>
+            </div>
+            <button class="highlight-button">Subscribe</button>
+            <p>Best for just work</p>
+          </div>
+          <div class="pricing-card">
+            <p class="highlight">Save $120 per year</p>
+            <h2>Unlimited</h2>
+            <p class="highlight">Unlimited minutes <i class="fas fa-info-circle info-icon"></i></p>
+            <div class="price-container">
+              <div class="price">$39</div>
+              <div class="price-details">per month<br>billed yearly</div>
+            </div>
+            <button class="highlight-button">Subscribe</button>
+            <p>Best for work & personal</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="main-content">
+        <p class="tagline">Go beyond the <span>screen</span></p>
+        <h1>pendant</h1>
+        <p>The world's most wearable AI.</p>
+        <a class="button" href="#">
+          <i class="fas fa-play"></i>
+          Watch the trailer
+        </a>
+        <video autoplay muted loop>
+          <source src="https://www.limitless.ai/media/pendant/black/pendant.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+        <div class="color-options-container">
+          <div class="color-options">
+            <div class="color selected" style="background-color: #000000;">
+            </div>
+            <div class="color" style="background-color: #d3d3d3;">
+            </div>
+            <div class="color" style="background-color: #e0e0ff;">
+            </div>
+          </div>
+        </div>
+        <div class="product-title">
+          An unfairly affordable luxury.
+        </div>
+        <div class="product-price">
+          $99—Shipping Q1 2025
+        </div>
+        <button class="preorder-button">
+          Preorder for $99
+        </button>
+        <div class="no-subscription">
+          No subscription required.
+        </div>
+      </div>
+
+      <div class="main-content-pendant">
+        <div class="pendant-card feature-list">
+          <ul>
+            <li>
+              100-hour battery life
+            </li>
+            <li>
+              Light and truly wearable
+            </li>
+            <li>
+              Durable aluminum body
+            </li>
+            <li>
+              Crystal clear audio
+            </li>
+            <li>
+              Weatherproof
+            </li>
+            <li>
+              Versatile magnetic clasp
+            </li>
+            <li>
+              Wi-Fi and Bluetooth enabled
+            </li>
+            <li>
+              USB-C charging
+            </li>
+          </ul>
+        </div>
+        <div class="pendant-card product-image">
+          <img alt="Product image of a black wearable pendant"
+            src="https://www.limitless.ai/media/pendant/black/pendant-front.webp" />
+        </div>
+      </div>
+      <section class="additional-section">
+        <div class="additional-section__card additional-section__image">
+          <img alt="Front view of a black wearable pendant"
+            src="https://www.limitless.ai/media/pendant/black/pendant-angle.webp" />
+        </div>
+        <div class="additional-section__card additional-section__image">
+          <img alt="Front view of a black wearable pendant"
+            src="https://www.limitless.ai/media/pendant/black/pendant-back.webp" />
+        </div>
+      </section>
+      <div class="preorder-section">
+        <span>
+          Preorder your Pendant
+        </span>
+        <select>
+          <option>
+            Black
+          </option>
+          <option>
+            White
+          </option>
+        </select>
+        <button>
+          Preorder for $99
+        </button>
+      </div>
+
+      <section class="content-section">
+        <h1>An intuitive way to capture unexpected strokes of genius.</h1>
+        <p>Pendant is an elegant, lightweight wearable that remembers what you say throughout the day, from in-person
+          meetings, impromptu conversations, and personal insights.</p>
+        <div class="section">
+          <h2>Made for your outfit, and your life.</h2>
+        </div>
+        <div class="two-columns">
+          <div class="column">
+            <h2>Preserving conversations.</h2>
+            <h2>Capturing moments.</h2>
+          </div>
+          <div class="column">
+            <p>Lunch meetings, conferences, clients calls, or doctors visits.</p>
+            <p>Recording spontaneous ideas, memorable quotes, or important reminders.</p>
+          </div>
+        </div>
+        <div class="two-columns" style="margin-top: -50px;">
+          <div class="column">
+            <h2>Personal reflection.</h2>
+          </div>
+          <div class="column">
+            <p>Verbal processing, thinking out loud, capturing a thought while your hands are busy.</p>
+          </div>
+        </div>
+        <div class="preorder">
+          <select>
+            <option>Black</option>
+            <option>White</option>
+          </select>
+          <button>Preorder for $99</button>
+        </div>
+      </section>
+
+      <footer>
+        <p>The world’s most wearable AI. <a href="#">Preserve</a> conversations and ask your personalized AI anything.
+        </p>
+      </footer>
+    </main>
+  </div>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,6 +855,7 @@
   <link href="/images/favicon.png" rel="icon" type="image/png">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./src/styles/style.scss">
+  <link rel="stylesheet" href="./src/styles/main.scss">
 </head>
 
 <body>
@@ -87,68 +918,83 @@
       <button class="cta-button">
         Get started for free
       </button>
-      <section class="meeting-card">
-        <div class="left-section">
-          <h2>
-            Product Review
-          </h2>
-          <p>
-            In 5 min · 12:30-1:00 PM ·
-            <i class="fas fa-users">
-            </i>
-            <i class="fas fa-video">
-            </i>
-            <i class="fas fa-microphone">
-            </i>
-          </p>
-          <button class="join-button">
-            Join &amp; Record
-          </button>
-          <p>
-            Stammy’s AirPods Max
-          </p>
-        </div>
-        <div class="right-section">
-          <img alt="AirPods Max" src="https://placehold.co/100x100" />
-        </div>
-      </section>
-      <section class="meeting-card">
-        <div class="left-section">
-          <h2>
-            Product Review
-          </h2>
-          <p>
-            In 5 min · 12:30-1:00 PM ·
-            <i class="fas fa-users">
-            </i>
-            <i class="fas fa-video">
-            </i>
-            <i class="fas fa-microphone">
-            </i>
-          </p>
-          <button class="join-button">
-            Join &amp; Record
-          </button>
-          <p>
-            Stammy’s AirPods Max
-          </p>
-        </div>
-        <div class="right-section">
-          <img alt="AirPods Max" src="https://placehold.co/100x100" />
-        </div>
-      </section>
-    </main>
 
-    <footer>
-      <p>
-        The world’s most wearable AI.
-        <a href="#">
-          Preserve
-        </a>
-        conversations and ask your personalized AI anything.
-      </p>
-    </footer>
+      <section class="meetings">
+        <h1>Meetings</h1>
+        <p>
+          Make your day feel easy with all the context<br>
+          from your online and real-world conversations<br>
+          in one place.
+          <span id="scrollText">No bots required.</span>
+        </p>
+      </section>
+
+      <section class="prep-section">
+        <div class="container">
+          <div class="prep-content">
+            <div class="prep-title">
+              <h2>Prep</h2>
+            </div>
+            <h3>Make the most of every conversation with pre-meeting briefs</h3>
+            <p>Get context from your Gmail, Google Calendar, previous meetings, and in-person conversations before your
+              call.</p>
+          </div>
+          <div class="prep-example">
+            <p>Product Review</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>
+          The world’s most wearable AI.
+          <a href="#">
+            Preserve
+          </a>
+          conversations and ask your personalized AI anything.
+        </p>
+      </footer>
   </div>
+
+<section class="card-section">
+        <div class="card">
+          <h2>Prep</h2>
+          <h1>Make the most of every conversation with pre-meeting briefs</h1>
+          <p>Get context from your Gmail, Google Calendar, previous meetings, and in-person conversations before your
+            call.</p>
+          <img
+            src="https://www.limitless.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeeting-prep.a288b879.jpg&w=1080&q=90"
+            alt="Product Review meeting prep details">
+        </div>
+        <div class="card">
+          <h2>Prep</h2>
+          <h1>Make the most of every conversation with pre-meeting briefs</h1>
+          <p>Get context from your Gmail, Google Calendar, previous meetings, and in-person conversations before your
+            call.</p>
+          <img
+            src="https://www.limitless.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeeting-prep.a288b879.jpg&w=1080&q=90"
+            alt="Product Review meeting prep details">
+        </div>
+        <div class="card">
+          <h2>Prep</h2>
+          <h1>Make the most of every conversation with pre-meeting briefs</h1>
+          <p>Get context from your Gmail, Google Calendar, previous meetings, and in-person conversations before your
+            call.</p>
+          <img
+            src="https://www.limitless.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeeting-prep.a288b879.jpg&w=1080&q=90"
+            alt="Product Review meeting prep details">
+        </div>
+        <div class="card">
+          <h2>Prep</h2>
+          <h1>Make the most of every conversation with pre-meeting briefs</h1>
+          <p>Get context from your Gmail, Google Calendar, previous meetings, and in-person conversations before your
+            call.</p>
+          <img
+            src="https://www.limitless.ai/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fmeeting-prep.a288b879.jpg&w=1080&q=90"
+            alt="Product Review meeting prep details">
+        </div>
+      </section>
+
   <script>
     window.addEventListener('scroll', function () {
       const header = document.getElementById('header');
@@ -160,43 +1006,4 @@
     });
   </script>
   </div>
-
-  <!-- <header>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <div class="logo">
-          <a href="/" >
-            <svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-              <g fill="currentColor" clip-path="url(#clip0_9_531)">
-                <path
-                  d="M12.094 7.12a.85.85 0 0 0 .786.786c3.895.28 6.72 1.111 6.72 2.094s-2.825 1.814-6.72 2.094a.85.85 0 0 0-.786.786c-.28 3.895-1.111 6.72-2.094 6.72s-1.814-2.825-2.094-6.72a.85.85 0 0 0-.786-.786C3.225 11.814.4 10.983.4 10s2.825-1.814 6.72-2.094a.85.85 0 0 0 .786-.786C8.186 3.225 9.017.4 10 .4s1.814 2.825 2.094 6.72">
-                </path>
-                <path
-                  d="M12.976 7.257a.28.28 0 0 1-.253-.253 29 29 0 0 0-.178-1.565.82.82 0 0 1 .333-.791c1.908-1.342 3.404-1.943 3.907-1.44s-.095 1.994-1.431 3.897a.82.82 0 0 1-.793.333 29 29 0 0 0-1.585-.18m2.378 5.631a.82.82 0 0 0-.793-.333q-.759.109-1.585.18a.28.28 0 0 0-.253.254 29 29 0 0 1-.178 1.565.82.82 0 0 0 .333.791c1.908 1.341 3.404 1.942 3.907 1.44.503-.503-.095-1.994-1.431-3.897M7.09 15.364a.82.82 0 0 0 .334-.793 29 29 0 0 1-.18-1.581.28.28 0 0 0-.254-.254 29 29 0 0 1-1.56-.177.82.82 0 0 0-.793.334c-1.334 1.9-1.93 3.39-1.428 3.892.5.501 1.985-.092 3.881-1.42m-1.66-7.93a.82.82 0 0 1-.793-.334C3.303 5.2 2.707 3.711 3.21 3.21c.5-.501 1.985.092 3.881 1.42a.82.82 0 0 1 .334.793 29 29 0 0 0-.18 1.582.28.28 0 0 1-.254.253c-.54.047-1.063.107-1.56.178"
-                  opacity="0.66"></path>
-              </g>
-              <defs>
-                <clipPath id="clip0_9_531">
-                  <path fill="currentColor" d="M0 0h20v20H0z"></path>
-                </clipPath>
-              </defs>
-            </svg>
-            Limitless
-          </a>
-
-        </div>
-
-        <menu class="navbar-links">
-          <li><a href="#services">Meetings</a></li>
-          <li><a href="#about">Pendant</a></li>
-          <li><a href="#meetings">Privacy</a></li>
-        </menu>
-        <div class="navbar-actions">
-          <button class="navbar-btn">Get Started</button>
-        </div>
-      </div>
-    </nav>
-  </header>
-</body> -->
-
-</html>
+</html> -->
